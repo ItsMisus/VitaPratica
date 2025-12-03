@@ -331,4 +331,55 @@
     }
 }
 
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #4DA6FF;
+    z-index: 9999; /* Assicurati che sia sopra tutto */
+    position: relative; /* necessario per z-index */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-categories,
+    .user-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background-color: #1E2A38;
+        position: absolute; /* importante per non spingere tutto giù */
+        top: 60px; /* subito sotto header */
+        left: 0;
+        z-index: 999; /* sotto l’hamburger ma sopra il resto */
+    }
+
+    .nav-categories.active,
+    .user-links.active {
+        display: flex;
+    }
+
+    .nav-categories a,
+    .user-links a {
+        margin: 10px 0;
+        padding: 10px 0;
+        color: #4DA6FF;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .nav-categories a:hover,
+    .user-links a:hover {
+        color: #FFFFFF;
+        background-color: #4DA6FF;
+    }
+}
+
+
 
