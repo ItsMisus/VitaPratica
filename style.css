@@ -1,0 +1,60 @@
+
+body {
+.menu {
+    display: flex;               /* disposizione orizzontale */
+    justify-content: space-around; /* distribuisce i link uniformemente */
+    margin: 40px 0;
+}
+
+.menu a {
+    font-family: Arial, sans-serif;
+    font-size: 44px;
+    text-decoration: none;       /* rimuove sottolineatura */
+    color: #333;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #fff;
+    background: #333;
+    border-radius: 30px;
+    transform: scale(1.1);       /* effetto “pop” */
+}
+footer {
+    background: #333;          /* sfondo scuro */
+    padding: 20px 0;           /* spazio interno */
+    text-align: center;        /* centra tutto il contenuto */
+}
+
+.footer-link {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;     /* rimuove sottolineatura */
+    display: inline-block;     /* per dare margine tra i link */
+    margin: 0 15px;            /* distanza tra i link */
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    color: #ffcc00;            /* colore al passaggio del mouse */
+    transform: scale(1.1);     /* effetto leggero “pop” */
+}
+.titolo {
+    font-family: 'Lucida Console"', serif;
+    font-size: 75px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, #E6E6FA, #000000 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.titolo:hover {
+    transform: scale(1.1);
+    color: #E6E6FA;
+}
+
+}
