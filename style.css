@@ -241,3 +241,27 @@
     color: #FFFFFF;
 }
 
+/* Responsive per telefoni */
+@media (max-width: 768px) {
+    header .nav-categories, .menu-bar, .user-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .articles-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .article-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    header, .menu-bar, .articles, footer {
+        padding: 10px;
+    }
+}
+
+
