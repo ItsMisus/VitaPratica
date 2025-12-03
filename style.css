@@ -309,29 +309,38 @@
     }
 }
 
-/* ==================== MOBILE LINK PULITI ==================== */
+/* ==================== MOBILE SEMPLICE E PULITO ==================== */
 @media (max-width: 768px) {
-    .nav-categories a {
-        background-color: transparent;  /* niente blu pieno */
-        color: #4DA6FF;                 /* colore testo blu */
-        border-radius: 5px;              /* rotondità minima */
-        border: 1px solid #4DA6FF;      /* piccolo bordo */
-        margin: 5px 0;                   /* spazio tra i link */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
         padding: 10px;
-        width: 100%;                     /* occupa tutta la larghezza */
-        text-align: center;              /* centrato */
-        display: block;                  /* forza blocco verticale */
     }
 
-    .nav-categories a:hover {
-        background-color: #4DA6FF;       /* colore al passaggio */
-        color: #FFFFFF;                  /* testo bianco */
-        transform: none;                 /* niente sollevamento */
-    }
-
-    .user-links a {
+    .nav-categories,
+    .user-links {
+        flex-direction: column;
         width: 100%;
-        margin: 5px 0;
-        text-align: center;
+        margin: 10px 0 0 0;
+        padding: 0;
+    }
+
+    .nav-categories a,
+    .user-links a {
+        display: block;
+        width: 100%;
+        padding: 12px 10px;
+        margin: 0;               /* niente margini strani */
+        border-radius: 0;        /* niente angoli arrotondati */
+        background-color: transparent;
+        color: #4DA6FF;
+        text-align: left;
+        font-weight: normal;
+    }
+
+    .nav-categories a:hover,
+    .user-links a:hover {
+        background-color: #E0E6F0; /* leggera evidenza al tocco */
+        color: #1E2A38;
     }
 }
