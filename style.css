@@ -308,3 +308,30 @@
         text-align: center;
     }
 }
+
+/* ==================== MOBILE LINK PULITI ==================== */
+@media (max-width: 768px) {
+    .nav-categories a {
+        background-color: transparent;  /* niente blu pieno */
+        color: #4DA6FF;                 /* colore testo blu */
+        border-radius: 5px;              /* rotondità minima */
+        border: 1px solid #4DA6FF;      /* piccolo bordo */
+        margin: 5px 0;                   /* spazio tra i link */
+        padding: 10px;
+        width: 100%;                     /* occupa tutta la larghezza */
+        text-align: center;              /* centrato */
+        display: block;                  /* forza blocco verticale */
+    }
+
+    .nav-categories a:hover {
+        background-color: #4DA6FF;       /* colore al passaggio */
+        color: #FFFFFF;                  /* testo bianco */
+        transform: none;                 /* niente sollevamento */
+    }
+
+    .user-links a {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+    }
+}
