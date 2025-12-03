@@ -264,4 +264,49 @@
     }
 }
 
+/* ==================== RESPONSIVE PER TELEFONI ==================== */
+@media (max-width: 768px) {
+
+    /* Header e menu in colonna */
+    header, .menu-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    /* Nasconde i link grandi e mostra il bottone hamburger */
+    .nav-categories, .menu-bar, .user-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /* Bottone hamburger */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 28px;
+        color: #4DA6FF;
+        margin-left: auto;
+    }
+
+    /* Mostra menu quando attivo */
+    .nav-categories.active, .menu-bar.active, .user-links.active {
+        display: flex;
+    }
+
+    /* Articoli in colonna */
+    .articles-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .article-card img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
 
