@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitaPratica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="header">
+  <div class="logo">
+    <a href="VitaPratica.html">
+        <h1>VitaPratica<span>.com</span></h1>
+    </a>
+</div>
+
+
+    <nav class="nav-categories">
+        <a href="elettronica.html">Elettronica</a>
+        <a href="casa.html">Casa</a>
+        <a href="giardino.html">Giardino</a>
+        <a href="abbigliamento.html">Abbigliamento</a>
+        <a href="offerte.html">Offerte</a>
+        <a href="novita.html">Novità</a>
+    </nav>
+    <div class="user-links">
+        <a href="accedi.html">Accedi</a>
+        <a href="carrello.html">Carrello</a>
+    </div>
+</header>
+
+<!-- ==================== MENU PRINCIPALE ==================== -->
+<nav class="menu-bar">
+    <a href="offerte.html">Offerte</a>
+    <a href="shop.html">Acquista Di Nuovo</a>
+    <a href="bestseller.html">BestSeller</a>
+    <a href="libri.html">Libri</a>
+    <a href="cronologia.html">Cronologia</a>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+    <h2>Scopri il meglio per la tua vita pratica</h2>
+    <p>Prodotti selezionati per casa, giardino, abbigliamento e molto altro.</p>
+    <a href="catalogo.html" class="btn-hero">Esplora Ora</a>
+</section>
+
+<!-- ==================== SEZIONE ARTICOLI ==================== -->
+<section class="articles">
+    <h2>Scelti per Te</h2>
+    <div class="articles-grid">
+        <div class="article-card">
+            <img src="img/prodotto1.jpg" alt="Prodotto 1">
+            <h3>Prodotto 1</h3>
+            <p>Breve descrizione del prodotto 1.</p>
+            <a href="#" class="btn-article">Scopri</a>
+        </div>
+        <div class="article-card">
+            <img src="img/prodotto2.jpg" alt="Prodotto 2">
+            <h3>Prodotto 2</h3>
+            <p>Breve descrizione del prodotto 2.</p>
+            <a href="#" class="btn-article">Scopri</a>
+        </div>
+        <div class="article-card">
+            <img src="img/prodotto3.jpg" alt="Prodotto 3">
+            <h3>Prodotto 3</h3>
+            <p>Breve descrizione del prodotto 3.</p>
+            <a href="#" class="btn-article">Scopri</a>
+        </div>
+        <div class="article-card">
+            <img src="img/prodotto4.jpg" alt="Prodotto 4">
+            <h3>Prodotto 4</h3>
+            <p>Breve descrizione del prodotto 4.</p>
+            <a href="#" class="btn-article">Scopri</a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+    <a href="Privacy.html">Privacy</a>
+    <a href="Termini.html">Termini</a>
+    <a href="Contatti.html">Contatti</a>
+</footer>
+
+<script>
+const userName = document.getElementById('user-name'); // span in alto a destra
+const loginLink = document.getElementById('login-link'); // link Accedi
+const logoutBtn = document.getElementById('logout-btn'); // pulsante logout
+
+function showUser(nome){
+    userName.textContent = nome;
+    loginLink.style.display = "none";
+    logoutBtn.style.display = "inline-block";
+}
+
+function hideUser(){
+    userName.textContent = "";
+    loginLink.style.display = "inline-block";
+    logoutBtn.style.display = "none";
+}
+
+// Controlla se c'è utente loggato
+const emailLoggato = localStorage.getItem('utenteLoggato');
+if(emailLoggato){
+    const utenti = JSON.parse(localStorage.getItem('utenti')) || {};
+    if(utenti[emailLoggato]){
+        showUser(utenti[emailLoggato].nome);
+    }
+}
+
+// Logout
+logoutBtn.addEventListener('click', () => {
+    localStorage.removeItem('utenteLoggato');
+    hideUser();
+});
+</script>
+
+</body>
+</html>
