@@ -308,5 +308,17 @@
     }
 }
 
+.hamburger {
+    display: none; /* rimane nascosto su desktop */
+    font-size: 28px;
+    cursor: pointer;
+    color: #4DA6FF;
+    z-index: 1000; /* sopra tutto il resto */
+}
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+}
 
 
