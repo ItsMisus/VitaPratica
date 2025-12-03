@@ -1,4 +1,10 @@
-function toggleMenu() {
-    document.querySelector('.nav-categories').classList.toggle('active');
-    document.querySelector('.user-links').classList.toggle('active');
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav-categories');
+    const user = document.getElementById('user-links');
+
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        user.classList.toggle('active');
+    });
+});
